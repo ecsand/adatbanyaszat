@@ -32,7 +32,7 @@ def make_empty_fig():
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 solvers=['auto', 'svd', 'cholesky', 'lsqr', 'sparse_cg', 'sag', 'saga', 'lbfgs']
-current_dir = os.path.dirname(os.path.abspath(__file__))  # Aktuális script mappája
+current_dir = os.path.dirname(os.path.abspath(__file__))  
 devdata= pd.read_csv(os.path.join(current_dir, '1_emberi_fejlettseg.csv'))
 uniquevars=devdata.columns.str.replace(r'\s*\(\d{4}\)', '', regex=True).unique()
 uniquevars=uniquevars[5:]
